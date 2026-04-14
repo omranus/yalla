@@ -1,34 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>YALLA Courts & Co - Réservations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YALLA Courts & Co</title>
     <style>
-        /* Supprime les marges et force l'affichage sur tout l'écran */
-        body, html { 
-            margin: 0; 
-            padding: 0; 
-            height: 100%; 
-            width: 100%;
-            overflow: hidden; 
-            background-color: #f0f2f5; 
-        }
-        /* Configuration de la fenêtre invisible qui contient votre application Google */
-        iframe { 
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%; 
-            height: 100%; 
-            border: none; 
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: sans-serif; }
+        iframe { width: 100%; height: 100%; border: none; }
+        .fix-btn { 
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background: #007bff; color: white; padding: 12px 20px; 
+            border-radius: 25px; text-decoration: none; font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: none;
         }
     </style>
 </head>
 <body>
-    <iframe 
-        src="https://script.google.com/macros/s/AKfycbxEagJVFFR09EDD0Kqq_BSrQFJDGw4sD9C3hmCMUOm8J6vQbuJjqHKuffCFgznm1ljY/exec"
-        allow="geolocation; microphone; camera">
-    </iframe>
+    <iframe id="myIframe" src="https://script.google.com/macros/s/AKfycbxEagJVFFR09EDD0Kqq_BSrQFJDGw4sD9C3hmCMUOm8J6vQbuJjqHKuffCFgznm1ljY/exec?v=1"></iframe>
+    
+    <a href="https://script.google.com/macros/s/AKfycbxEagJVFFR09EDD0Kqq_BSrQFJDGw4sD9C3hmCMUOm8J6vQbuJjqHKuffCFgznm1ljY/exec" 
+       target="_blank" class="fix-btn" id="btnIphone">Ouvrir dans Safari (iPhone Fix)</a>
+
+    <script>
+        // Si après 3 secondes rien ne charge, on montre le bouton pour iPhone
+        setTimeout(function() {
+            document.getElementById('btnIphone').style.display = 'block';
+        }, 3000);
+    </script>
 </body>
 </html>
