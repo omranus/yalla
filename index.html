@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>YALLA Courts & Co - Réservations</title>
+    <style>
+        /* Supprime les marges et force l'affichage sur tout l'écran */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%;
+            overflow: hidden; 
+            background-color: #f0f2f5; 
+        }
+        /* Configuration de la fenêtre invisible qui contient votre application Google */
+        iframe { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbxEagJVFFR09EDD0Kqq_BSrQFJDGw4sD9C3hmCMUOm8J6vQbuJjqHKuffCFgznm1ljY/exec"
+        allow="geolocation; microphone; camera">
+    </iframe>
+</body>
+</html>
